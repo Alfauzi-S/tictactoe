@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- Papan Skor -->
+    <div class="score-board">
+      <div class="score-box">
+        <span class="label">Pemain X</span>
+        <span id="scoreX" class="score">0</span>
+      </div>
+      <div class="score-box">
+        <span class="label">Seri</span>
+        <span id="scoreDraws" class="score">0</span>
+      </div>
+      <div class="score-box">
+        <span class="label">Pemain O / AI</span>
+        <span id="scoreO" class="score">0</span>
+      </div>
+    </div>
+
+    <!-- Mode Permainan -->
+    <div class="controls">
+      <label for="modeSelect">Mode Permainan:</label>
+      <select id="modeSelect">
+        <option value="2player">2 Pemain (Lokal)</option>
+        <option value="easy">AI Mudah (Acak)</option>
+        <option value="hard">AI Sulit (Minimax)</option>
+      </select>
+    </div>
+
+    <div id="status" class="status">Giliran Pemain X</div>
+    
+    <!-- Papan Permainan -->
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div class="button-group">
+      <button id="restartBtn">Ulangi Permainan</button>
+      <button id="resetScoreBtn" class="btn-secondary">Reset Skor</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

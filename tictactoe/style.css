@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Papan Skor */
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-box .label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.score-box .score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Kontrol Mode */
+.controls {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.controls select {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.status {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #495057;
+  min-height: 27px;
+}
+
+/* Board & Cells FIXED SIZE */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f1f3f5;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1; /* Mencegah perubahan tinggi teks */
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #333;
+}
+
+.cell:hover {
+  background-color: #e9ecef;
+}
+
+/* Warna Khusus Simbol X dan O */
+.cell[data-player="X"] {
+  color: #ff6b6b;
+}
+
+.cell[data-player="O"] {
+  color: #4d96ff;
+}
+
+/* Highlight Kemenangan (Warna Emas) */
+.cell.winner {
+  background-color: #ffd43b !important;
+  color: #212529 !important;
+}
+
+/* Tombol Kontrol */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4d96ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2575fc;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #495057;
+}
